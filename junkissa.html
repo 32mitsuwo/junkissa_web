@@ -1,0 +1,119 @@
+<!--プログラミング頑張るチャンネル-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Kaisei+Opti&family=Shippori+Mincho+B1&family=Yuji+Syuku&display=swap" rel="stylesheet">
+<title>名古屋、純喫茶界隈</title>
+<link href="junkissa.css" rel="stylesheet" type="text/css" media="all">
+<link rel="shortcut icon" href="favicon.ico">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'tpi6vcv',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+</head>
+<body>
+    <div id="luxy"><!--囲んだ部分はfixedになる-->
+      <div class="slide">
+       <img src="../JUNkissa/img/pic1.png" alt="喫茶店">
+       <img src="../JUNkissa/img/pic2.png" alt="喫茶店">
+       <img src="../JUNkissa/img/pic3.png" alt="喫茶店">
+    </div>
+  
+<main>
+    <div class="fadeIn"> <!--ふわっとさせたい要素-->
+      <img src="../JUNkissa/top3.png" class="top3 luxy-el" data-speed-y="-7" data-offset="100">
+        <p class="setsumei">お酒の提供がない喫茶店　―　純喫茶　―<br>
+        　　<span style="font-size:1.2em;">「純粋に珈琲を楽しんでもらいたい」</span><br>
+        その思いがつまった純喫茶は近年再注目を集めています。<br>
+        昔ながらの喫茶文化が根づく街、名古屋では<br>　上質な喫茶体験を提供してくれる純喫茶がたくさん。<br>
+        古き良き日本のノスタルジックを感じる旅に出ませんか？<br>
+            </p>
+            <img src="../JUNkissa/top2.png" class="top2 luxy-el" data-speed-y="5" data-offset="-200">
+        </div>
+
+        
+<section class = "background">
+        <div class="menu luxy-el" data-speed-y="8" data-offset="-300">
+            <img src="img/menuv2.png">
+      </div>
+
+      <h3 class="menu luxy-el" data-speed-y="8" data-offset="-320">
+        いくつか訪れたことのある喫茶店から、私が厳選した名古屋のおすすめ純喫茶です。<br>
+        お気に入りのお店が見つかりますように。
+      </h3>
+      
+        <section class="area1">
+          <div class="img luxy-el" data-speed-y="-5" data-offset="250"><img src="../JUNkissa/mokku/cream.png" alt="モック" ></div>
+          <a href="mokku.html"><div class="box" >
+          
+            <h2>COFFEEモック</h2>
+            <p>そのスプーンに魅了されて。</p>
+            
+          </div>
+          </a>
+          </section>
+        
+          <section class="area2">
+         <div class="img luxy-el" data-horizontal="1" data-spped-x="13"><img src="../JUNkissa/bonbon/bonbon_order.png" alt="ボンボン" ></div>
+          <a href="bonbon.html"><div class="box" >
+          <h2>洋菓子・喫茶ボンボン</h2>
+            <p>老舗洋菓子店の焼き菓子はいかが？</p>
+          </div>
+          </a>
+          </section>
+          
+          <section class="area3">
+         <div class="img luxy-el" data-speed-y="-4" data-offset="300"><img src="../JUNkissa/zomeshi/zomeshi-anbata.png" alt="ゾウメシ"></div></figure>
+          <a href="zomeshi.html"><div class="box" >
+          <h2>喫茶ゾウメシ</h2>
+            <p>レトロモダンなゾウさんマークの喫茶店</p>
+          </div>
+          </a>
+          </section>
+</section>
+          <div class = "prof">
+            <img src="../JUNkissa/me.jpg" class="me">
+             <div class="side-content">
+            <img src="../JUNkissa/editor.png" class="editor">
+            <p>奈良県出身の左利きB型<br>カメラと椎名林檎と喫茶店巡りが趣味<br>
+              Olympusのミラーレス高２から愛用してる。<br>
+              最近はキッズカメラを購入。<br>
+              画質荒いのが逆に良いよ◎<br>
+              ミッフィーとジブリのジジが好きです。よろしくね(^^)
+              </p>
+              </div>
+
+            </div>
+
+  
+  <footer>
+            <small> Made by Mitsune Ioku</small>
+        </footer>
+
+
+        </main>
+    </div><!--/luxy-->  
+          <script src="luxy.js" charset="utf-8"></script>
+          <script>
+          // Luxy.jsの初期化
+          luxy.init({
+              wrapper: "#luxy", // 慣性スクロールを囲む要素のID
+              targets: ".luxy-el", // パララックスの要素のclass名
+              wrapperSpeed: 0.08, // スクロールスピード
+            });
+          </script>
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="junkissa.js"></script>
+
+</body>
+</html>

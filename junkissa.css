@@ -1,0 +1,264 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    background-color:#fffcf0;
+    white-space: nowrap; /* 文字を折り返さないようにする */
+    overflow-x: hidden;
+}
+
+
+.slide{/*親要素*/
+   position:relative;
+   min-height:100vh;
+}
+
+.slide img{ 
+position:absolute;/*絶対これ*/
+width:100vw;
+height: 100vh;
+opacity: 0;
+animation: slideshow 9s linear infinite;
+}
+.slide img:nth-child(2){
+    animation-delay:3s;
+}
+.slide img:last-child{
+    animation-delay:6s;
+}
+
+@keyframes slideshow{/*背景画像のスライドショー*/
+    0%{
+        opacity: 0;
+    }
+    
+    5%{
+        opacity:1;
+    }
+    37%{
+        opacity:1;
+    }
+    41%{
+        opacity:0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+/*説明文の出現*/
+.fadeIn p{
+    font-size: 22px;
+    color: rgb(107, 72, 19);
+    text-shadow: 1px 1px 5px rgba(92, 48, 12, 0.5);
+    font-family: "oradano-mincho-gsrr", sans-serif;
+    font-weight:lighter;
+    letter-spacing: 2px;
+    line-height: 3;
+
+}
+
+.setsumei{
+  text-align: center;
+}
+
+.fadeIn{
+    margin-top:10%;
+    writing-mode: vertical-rl;/*縦書き*/
+    opacity:0;
+    margin-left: 22%;
+    margin-bottom: 20%;
+    transform:translate(0,100px);
+    transition:all 1s;
+
+}
+.fadeIn.active{
+    opacity : 1;
+    transform : translate(0, 0);
+  }
+
+  .top2 {/*珈琲豆*/
+    margin-top:20%;
+
+  }
+  
+  .top3 {
+    margin-top:70%;
+  }
+ .background{
+  padding-bottom: 4%;
+  background-image: url(../JUNkissa/img/haikei.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ }
+
+  .menu img{
+   text-align: center;
+    width:55%;
+    margin-top:80px;
+    margin-bottom: 20px;
+  }
+
+  .menu{
+    text-align: center;
+  }
+
+  h3{
+    font-family: "ten-mincho";
+    font-size:20px;
+    font-weight: lighter;
+    letter-spacing: 0.2em;
+    color: rgb(107, 72, 19);
+    margin-bottom: 100px;
+  }
+  h2{
+    font-family:"oradano-mincho-gsrr", sans-serif;
+    font-size:2.3rem;
+    margin:0 0 20px 0;
+    color:rgb(95, 63, 16);
+    font-weight: normal;
+  }
+
+  p{
+    font-family:"ten-mincho";
+    font-size: 1.3rem;
+    color: rgb(105, 67, 18);
+  }
+  
+  .area1{/*モック*/
+    position:relative;
+    margin:0 auto 7% auto;
+    padding: 0 30px;
+    max-width:1000px;
+    width:100%;
+    background-image: url(../junkissa/img/jaikei_green.png);
+    background-size: 600px;
+
+  }
+  .area2{/*ボンボン*/
+    /*text-align:right;*/
+    position:relative;
+    margin-left:30%;
+    margin-right:30px;
+    padding: 7px 30px 45px 30px;
+    max-width:1000px;
+    width:100%;
+    background-image: url(../junkissa/img/jaikei.png);
+    background-size: 600px;
+  }
+  
+  .area3{/*ゾウメシ*/
+    position:relative;
+    margin:10% auto 10% auto;
+    padding:  20px 40px;
+    max-width:1000px;
+    width:100%;
+    background-image: url(../junkissa/img/jaikei_yellow.png);
+    background-size: 600px;
+  }
+  
+.area1 img{
+  width:34%;
+}
+.area2 img{
+  width:60%;
+}
+.area3 img{
+  width:60%;
+}
+  
+  
+  .area1 .box{
+    position:absolute;
+    top:15%;
+    left:30%;
+    background-color: #ECE4D1;
+    background-size: 400px;
+    padding:30px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .area2 .box{
+    position:absolute;
+    top: 10px;
+    left:50%;
+    background-color:#ECE4D1;
+    background-size: 400px;
+    padding:30px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+ 
+  .area3 .box{
+    position:absolute;
+    top:2%;
+    left:40%;
+    background-color:#ECE4D1;
+    background-size: 300px;
+    padding:30px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .area1 .box:hover{
+    transform:scale(1.15);
+    cursor:pointer;
+  }
+  .area2 .box:hover{
+    transform:scale(1.15);
+    cursor:pointer;
+  }
+  .area3 .box:hover{
+    transform:scale(1.15);
+    cursor:pointer;
+  }
+
+  .prof{
+    display:flex;
+    align-items: center;
+    margin-top:5%;
+    margin-bottom: 5%;
+  }
+
+  .me{
+    width:17%;
+   margin-left:28%;
+   margin-right: 50px;
+  }
+  .editor{
+    width:25%;
+  }
+
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 20px;
+    text-align: left;
+}
+.side-content p{
+  font-size:18px;
+  font-weight:normal;
+  font-family: yu-gothic-pr6n,sans-serif;
+  color:black;
+}
+
+   footer {
+    padding-top:10px;
+    font-size:16px;
+    height: 3em;
+    text-align: center;
+    color: #fff;
+    background: #716310;
+    font-family: yu-gothic-pr6n,sans-serif;
+}
+ 
+
+
+ 

@@ -1,0 +1,319 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color:#fffcf0;
+    background-image: url(../JUNkissa/kami2.jpg);
+    overflow-x: hidden;
+    white-space: nowrap; /* 文字を折り返さないようにする */
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #fffcf0;
+  background-size: 400px;
+  align-items: center;
+  /*border-bottom: 1px solid  rgb(66, 46, 15);*/
+ box-shadow: 0 3px 3px rgba(0, 0, 0, 0.07);
+}
+
+
+.menu-group li a{
+    /*線の基点とするためrelativeを指定*/
+	position: relative;
+}
+
+.menu-group li a:hover{
+	color:#B88F12;
+}
+
+.menu-group li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background:#a27a04;
+    /*アニメーションの指定*/
+    transition: all .5s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.menu-group li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+.title {/*名古屋、純喫茶界隈*/
+  margin-right: auto;
+  font-family:"ten-mincho";
+  margin-left:30px;
+  font-weight: normal;
+  font-size: 20px;
+  color:rgb(62, 45, 18);
+}
+
+.menu-item {/*ヘッダー内部*/
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  margin-right:10px;
+  font-family: "oradano-mincho-gsrr", sans-serif;
+  font-size: 19px;
+  }
+.menu-item a{
+    text-decoration: none;
+    color: rgb(56, 40, 15);
+}
+ /*ここからメイン*/
+.container {
+    position:relative;
+    height:100vh;
+}
+
+.bottom-image, .top-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bottom-image{
+    margin-top:30px;
+    width:60%;
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.top-image {
+    width:80%;
+    top: 150px;
+   left: 430px;
+    animation: fadeIn 0.6s ease-out;
+}
+@keyframes fadeIn {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.container p{
+  writing-mode: vertical-rl;/*縦書き*/
+  text-align: left;
+  font-family: "ten-mincho";
+  font-size:17px;
+  color:#3f3709;
+  letter-spacing: 0.2em;
+  line-height: 2.8;
+  z-index:999;
+  position:absolute;
+ margin-top:300px;
+ margin-left:130px;
+}
+
+
+
+  .scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	left:15%;
+    bottom:2%;
+	
+    /*全体の高さ*/
+	height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+	position: absolute;
+	left:-15px;
+	top: -15px;
+    /*テキストの形状*/
+	color:#716310;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top: 10%;
+    left:10%;
+
+    /*線の形状*/
+	width: 2px;
+	height: 50px;
+	background:#716310;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
+/*ここから魅力*/
+.area{
+    overflow: hidden;
+  }
+  .wrap{
+    display: flex;/*いじらない*/
+  }
+
+  .item {
+    background-image: url(../JUNkissa/img/film.png);
+    background-size: cover;
+    background-color: #F4f4f4;
+    height:100vh;
+    display: flex;/*これ大事！！*/
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .left-image-container,
+ .right-image-container{
+    padding:60px;
+    width:50%;
+    box-sizing: border-box;
+ }
+
+ .left-image-container img,
+ .right-image-container img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin-bottom: 10px;
+    padding-left:25%;
+ }
+ .at01{
+    width:50%;
+ }
+ .interior{
+  padding:15px;
+    width:50%;
+ }
+
+ .right-image-container p{
+  text-align: left;
+  font-family: yu-gothic-pr6n,sans-serif;
+  margin-top:0;
+  padding-left:15%;
+ }
+ /*ここからattraction02*/
+ .at02{
+  width:50%;
+}
+.menu{
+  margin-left:20px;
+  padding:20px;
+  width:40%;/*固定*/
+}
+
+ /*ここからattraction03*/
+ .item06 .left-image-container{
+  width:40%;
+ }
+ .item06 .right-image-container{
+  width:60%;
+ }
+ .at03{
+  width:40%;
+  padding-left:5%;
+}
+.creamp{/*写真*/
+  margin-left:20px;
+  padding-top:40px;
+  width:90%;
+}
+.creamt{/* テキスト写真*/
+  width:60%;
+  padding-left:0;
+}
+.item06 .right-image-container p{
+  text-align: left;
+  font-family: yu-gothic-pr6n,sans-serif;
+  margin-top:0;
+  padding-left:20%;
+ }
+
+
+
+   .info{
+    display:flex;
+    margin-top:0;
+    margin-bottom: 5%;
+    margin-left :100px;
+    font-family: yu-gothic-pr6n,sans-serif;
+    
+   }
+
+   .info ul{
+    width:50%;
+    padding-right: 20px; 
+   }
+   h2{
+    font-size: 40px;
+    font-weight: normal;
+   }
+   h3{
+    font-size: 16px;
+   font-weight:lighter;
+   }
+   .map{
+    width:50%;
+    margin-top: 100px;
+    margin-right:80px;
+   }
+
+   .map iframe {
+    width: 100%; /* 地図の幅を100%に設定 */
+    height: 400px; /* 地図の高さを指定（適切な高さに調整してください） */
+    border: 0;
+}
+
+
+footer {
+  padding-top:10px;
+  font-size:16px;
+  height: 3em;
+  text-align: center;
+  color: #fff;
+  background: #716310;
+  font-family: yu-gothic-pr6n,sans-serif;
+}
+   
